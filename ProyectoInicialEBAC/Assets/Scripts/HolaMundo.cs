@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HolaMundo : MonoBehaviour
 {
+    int x = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,6 @@ public class HolaMundo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        x = x + 1;
     }
 }
