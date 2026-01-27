@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class HolaMundo : MonoBehaviour
 {
-    int x = 0;
+    public static GameObject camara;
+
+    private void Awake()
+    {
+        camara = this.gameObject;
+        camara.name = "Camara Principal";
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        print("Algo pasó");
-        Debug.Log("Hola Mundo");
-        Debug.LogWarning("Algo salió medianamente mal");
-        Debug.LogError("Algo salió mal");
+        Debug.Log(camara.name+ " te saluda desde Colombia");
     }
 
     // Update is called once per frame
     void Update()
     {
-        x = x + 1;
+
+    }
+
+    private void OnDisable()
+    {
+        Debug.LogError(camara.name+ " ha sido desactivada. Se ha puesto triste...");
+    }
+
+    private void OnEnable()
+    {
+        Debug.LogWarning(camara.name + " ha sido activada. Está feliz!");
     }
 }
