@@ -8,7 +8,7 @@ public class CambioColor2 : MonoBehaviour
 
     void Awake()
     {
-        prefab2 = this.gameObject;
+        //prefab2 = this.gameObject;
     }
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class CambioColor2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Color Color2 = new Color(Random.value, Random.value, Random.value);
-        prefab2.GetComponent<MeshRenderer>().material.color = Color2;
+        /*Color Color2 = new Color(Random.value, Random.value, Random.value);
+        prefab2.GetComponent<MeshRenderer>().material.color = Color2;*/
     }
 }

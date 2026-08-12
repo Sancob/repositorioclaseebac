@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambioColor3 : MonoBehaviour
+public class CambioColor5 : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
 
     //GameObject prefab3;
-    public GameObject Capsule;
-    public GameObject Cube;
+    public GameObject EsferaAND;
+    public GameObject EsferaOR;
 
-    public bool colorChanged;
-    [SerializeField] bool ColorGO1;
-    [SerializeField] bool ColorGO2;
+
+    [SerializeField] bool colorChanged;
+    [SerializeField] bool ColorGO3;
+    [SerializeField] bool ColorGO4;
 
     void Awake()
     {
@@ -31,27 +32,27 @@ public class CambioColor3 : MonoBehaviour
         /*Color Color3 = new Color(Random.value, Random.value, Random.value);
         prefab3.GetComponent<MeshRenderer>().material.color = Color3;*/
 
-        if (Capsule != null)
+        if (EsferaAND != null)
         {
-            CambioColor1 scriptCapsule = Capsule.GetComponent<CambioColor1>();
+            CambioColor3 scriptEsferaAND = EsferaAND.GetComponent<CambioColor3>();
 
-            if (scriptCapsule != null)
+            if (scriptEsferaAND != null)
             {
-                ColorGO1 = scriptCapsule.colorChanged;
+                ColorGO3 = scriptEsferaAND.colorChanged;
             }
         }
 
-        if (Cube != null)
+        if (EsferaOR != null)
         {
-            CambioColor1 scriptCube = Cube.GetComponent<CambioColor1>();
+            CambioColor4 scriptEsferaOR = EsferaOR.GetComponent<CambioColor4>();
 
-            if (scriptCube != null)
+            if (scriptEsferaOR != null)
             {
-                ColorGO2 = scriptCube.colorChanged;
+                ColorGO4 = scriptEsferaOR.colorChanged;
             }
         }
 
-        if (ColorGO1 && ColorGO2)
+        if (ColorGO3 || ColorGO4)
         {
             colorChanged = true;
         }

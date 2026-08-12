@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambioColor3 : MonoBehaviour
+public class CambioColor4 : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
 
     //GameObject prefab3;
     public GameObject Capsule;
     public GameObject Cube;
+
 
     public bool colorChanged;
     [SerializeField] bool ColorGO1;
@@ -51,7 +52,7 @@ public class CambioColor3 : MonoBehaviour
             }
         }
 
-        if (ColorGO1 && ColorGO2)
+        if (ColorGO1 || ColorGO2)
         {
             colorChanged = true;
         }
