@@ -5,14 +5,21 @@ using UnityEngine;
 public class EjemploVariablesMod8 : MonoBehaviour
 {
     int miEntero = 0;
+    int valorInt1 = 0;
+    int valorInt2 = 0;
+    int miCasteoInt;
+
     float miFloat = 1.243120583205f;
     float a;
     float b;
     float c;
-    int miCasteoInt;
 
     public string color = "";
+    string miNombreCompleto = "Santiago Cobo Rojas";
     string valorFloat;
+    string convertirAInt1 = "2560";
+    string convertirAInt2 = "3460";
+    string eliminar5Caracteres = "Elimina los 5 primeros caracteres";
 
     public GameObject cubo1;
     public GameObject cubo2;
@@ -30,6 +37,35 @@ public class EjemploVariablesMod8 : MonoBehaviour
 
         meshRenderer = cubo1.GetComponent<MeshRenderer>();
         meshRenderer2 = cubo2.GetComponent<MeshRenderer>();
+
+        string miNombre = miNombreCompleto.Substring(0, 8);
+        string miPrimerApellido = miNombreCompleto.Substring(9, 4);
+        string miSegundoApellido = miNombreCompleto.Substring(14, 5);
+        string sin5Caracteres = eliminar5Caracteres.Substring(5);
+        string []listaDeNombres = miNombreCompleto.Split(' ');
+
+
+        if (!int.TryParse(convertirAInt1, out valorInt1))
+        {
+            Debug.LogError($"No se pudo convertir {convertirAInt1} a int");
+        }
+        if (!int.TryParse(convertirAInt2, out valorInt2))
+        {
+            Debug.LogError($"No se pudo convertir {convertirAInt2} a int");
+        }
+
+        int resultadoSuma = valorInt1 + valorInt2;
+
+        Debug.Log($"El resultado de la suma es: {resultadoSuma}");
+        Debug.Log($"Nombre: {miNombre}");
+        Debug.Log($"Primer Apellido: {miPrimerApellido}");
+        Debug.Log($"Segundo Apellido: {miSegundoApellido}");
+        Debug.Log($"Sin 5 caracteres: {sin5Caracteres}");
+
+        for (int i = 0; i < miNombreCompleto.Length; i +=2)
+        {
+            Debug.Log(miNombreCompleto[i]);
+        }
     }
 
     // Update is called once per frame
