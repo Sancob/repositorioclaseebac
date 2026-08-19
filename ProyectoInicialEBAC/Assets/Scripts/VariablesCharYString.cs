@@ -12,11 +12,19 @@ public class VariablesCharYString : MonoBehaviour
         Debug.Log(valorEntero);
 
         char miCaracter;
-        string miString = "Hola EBAC";
+        string miString = "Hola desde EBAC belles";
+        string miSegundoString = miString.Replace('e', 'E');
+        string miTercerString = miString.ToUpper();
+        string ejemploEscape = "\"";
+        string miNombre = "Santiago";
+        string misApellidos = "Cobo Rojas";
+        string primerApellido = misApellidos.Substring(0, 4);
+        string salida = $"Mi nombre es: {miNombre} y mis apellidos son: {misApellidos}";
+        ;
         miCaracter = miString[5];
         int longitud = miString.Length;
-        Debug.Log(miCaracter);
-        Debug.Log(longitud);
+        Debug.Log(primerApellido);
+        Debug.Log(salida);
     }
 
     // Update is called once per frame
