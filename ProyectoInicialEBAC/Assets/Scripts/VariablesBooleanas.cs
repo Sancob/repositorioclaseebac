@@ -9,9 +9,9 @@ public class VariablesBooleanas : MonoBehaviour
     int limiteInferior = -5;
     int limiteSuperior = 5;
 
-    bool variable1;
-    bool variable2;
-    bool variable3;
+    //bool variable1;
+    //bool variable2;
+    //bool variable3;
     enum SeleccionColor
     {
         rojo, verde, azul, blanco, gris
@@ -20,9 +20,9 @@ public class VariablesBooleanas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        variable1 = true;
-        variable2 = false;
-        variable3 = false;
+        //variable1 = true;
+        //variable2 = false;
+        //variable3 = false;
 
         valor1 = Random.Range(limiteInferior, limiteSuperior);
         Debug.Log(valor1);
